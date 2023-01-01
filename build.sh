@@ -4,7 +4,7 @@
 work_dir=/home/code01
 KERNEL_DEFCONFIG=vendor/alioth_defconfig
 ANYKERNEL3_DIR=$PWD/AnyKernel3/
-FINAL_KERNEL_ZIP=FlyCore_Alioth_Docker_v1.0.0.zip
+FINAL_KERNEL_ZIP=FlyCore_Alioth_Docker_v1.0.1.zip
 export ARCH=arm64
 
 # Speed up build process
