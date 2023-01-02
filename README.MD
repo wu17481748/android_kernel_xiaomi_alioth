@@ -6,15 +6,25 @@ An android `kernel` for XiaoMi `Alioth` devices with native `docker` feature.
 
 
 ### Usage:
-Prepare your `prebuilts`, then edit the `build.sh`.
+Prepare your `prebuilts`
 
-```sudo ./build.sh```
+then edit the `build.sh` (for arm64 platform is `build.aarch.sh`).
+
+```
+./build.sh
+```
+
+or
+```
+./build.aarch.sh
+```
 
 Finally, `adb sideload xxx.zip` for flash kernel and enjoy it!
 
 [Docker on Android](https://gist.github.com/tomxi1997/f1f8692342e57272d7aa8a1e9829c978)
 
 ### Prebuilts:
+#### For X86：
 aarch64-linux-android-4.9:
 ```
 https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/+/refs/heads/android-arm64-deadpool-4.9-android13-tv
@@ -28,6 +38,12 @@ https://gitlab.com/Alioth-Project/clang-r445002
 arm-linux-androideabi-4.9:
 ```
 https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/+/refs/heads/master
+```
+
+
+#### For arm64：
+```
+https://github.com/llvm/llvm-project/releases/tag/llvmorg-14.0.6
 ```
 
 
