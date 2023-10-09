@@ -1,5 +1,5 @@
 
-# FlyCore_Alioth_Docker
+# Alioth_Kernelsu-Lxc-Docker
 
 An android `kernel` for XiaoMi `Alioth` devices with native `docker` feature.
 
