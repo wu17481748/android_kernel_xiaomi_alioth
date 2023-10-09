@@ -85,12 +85,19 @@ jobs:
     - name: 上传 Anykernel3
       uses: actions/upload-artifact@v3
       with:
-        name: rec-卡刷包
+        name: TWRP-卡刷包
         path: kernel_workspace/AnyKernel3/*
         
         
     - name: 上传编译内核
       uses: actions/upload-artifact@v3
       with:
-        name: 源码-Image
-        path: kernel_workspace/android-kernel/out/arch/arm64/boot/Image    
+        name: Image
+        path: kernel_workspace/android-kernel/out/arch/arm64/boot/Image
+
+    - name: 上传编译内核
+      uses: actions/upload-artifact@v3
+      with:
+        name: Image.gz-dtb
+        path: kernel_workspace/android-kernel/out/arch/arm64/boot/Image.gz-dtb    
+      
