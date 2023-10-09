@@ -1,4 +1,4 @@
-name: 编译红米K40-Kernelsu-Lxc-Docker机型内核
+name: 编译红米K40-Kernelsu-Lxc-Docker内核
 
 on:
   workflow_dispatch:
@@ -37,21 +37,18 @@ jobs:
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace
         mkdir clang-aosp
-        git clone https://github.com/Google-Pixel-3-XL/clang-r416183b clang-aosp
+        git clone https://github.com/Google-Pixel-3-XL/clang-r416183b.git --depth 1 clang-aosp
     
     
     - name: 下载内核源码
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace
-        git clone https://github.com/wu17481748/android_kernel_4.14.186_oppo_mtk6853 -b main android-kernel --depth=1
-        cd android-kernel
-        mv vendor ../
-        cp -a 4.14.186/* ./
+        git clone https://github.com/wu17481748/android_kernel_xiaomi_alioth.git android-kernel --depth=1
+
 
 
 
     - name: 安装 ksu
-      if: env.KERNEL_KSU == 'yes'
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace/android-kernel
         curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -s ${{ env.KERNELSU_TAG }}
